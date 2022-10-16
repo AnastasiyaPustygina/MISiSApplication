@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/searchFragment">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.misisapplication.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.misisapplication.fragments.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_resultDishFragment"
+            app:destination="@id/resultDishFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_allDishFromCategoryFragment"
+            app:destination="@id/allDishFromCategoryFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allDishFromCategoryFragment"
+        android:name="com.example.misisapplication.fragments.AllDishFromCategoryFragment"
+        android:label="fragment_all_dish_from_category"
+        tools:layout="@layout/fragment_all_dish_from_category" >
+        <action
+            android:id="@+id/action_allDishFromCategoryFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+        <action
+            android:id="@+id/action_allDishFromCategoryFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeFragment"
+        android:name="com.example.misisapplication.fragments.RecipeFragment"
+        android:label="RecipeFragment"
+        tools:layout="@layout/fragment_recipe" />
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.misisapplication.fragments.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultDishFragment"
+        android:name="com.example.misisapplication.fragments.ResultDishFragment"
+        android:label="fragment_result_dish"
+        tools:layout="@layout/fragment_result_dish" >
+        <action
+            android:id="@+id/action_resultDishFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+        <action
+            android:id="@+id/action_resultDishFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+</navigation>

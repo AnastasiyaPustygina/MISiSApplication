@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MISiS Application</string>
+    <string name="search">поиск</string>
+    <string name="favorite">избранное</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="category">Категория</string>
+</resources>
